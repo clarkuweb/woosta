@@ -4,14 +4,18 @@
 #jacket {
 	position: relative;
 // 	top: -8.25rem;
-// 	height: 78vh;
+//	height: 90vh;
 }
 
 .fixed {
-	position: fixed !important;
+	position: relative;
 	width: 100vw;
 	height: 90vh;
 	z-index: -1;
+	
+	& > div {
+		position: fixed !important;
+	}
 }
 
 .fixed.blur {

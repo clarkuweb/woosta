@@ -241,7 +241,7 @@ function woosta_format_breadcrumbs( $crumbs ) {
 		if ( $c === $last ) { // last crumb isn't a hyperlink.
 			$output .= '<li aria-current="page">' . $c['name'] . '</li>';
 		} else {
-			$output .= '<li><a href="' . $c['href'] . '">' . $c['name'] . '</a></li>';
+			$output .= '<li><a href="' . trailingslashit( $c['href'] ) . '">' . $c['name'] . '</a></li>';
 		}
 	}
 	$output .= '</ol>';

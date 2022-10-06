@@ -8,11 +8,13 @@
 	}
 	
 	window.addEventListener("DOMContentLoaded", function() {
-		createJacket();
 		var js = document.getElementById("primary").querySelectorAll(".jacket");
-		js.forEach(function(el) {
-			document.getElementById("jacket").appendChild(el);
-		});
+		if ( !! js ) {
+			createJacket();
+			js.forEach(function(el) {
+				document.getElementById("jacket").appendChild(el);
+			});
+		}
   }, false);
     
 })();

@@ -2113,10 +2113,14 @@ footer nav li:not(:last-of-type) {
 }
 
 .fixed {
-	position: fixed !important;
+	position: relative;
 	width: 100vw;
 	height: 90vh;
 	z-index: -1;
+}
+
+.fixed > div {
+	position: fixed !important;
 }
 
 .fixed.blur {
