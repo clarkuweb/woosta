@@ -3,9 +3,6 @@
   "version": 2,
   "patterns": [],
 	"styles": {
-		"spacing": {
-			"blockGap": "calc(var(--type__size) * 2)"
-		}
 	},
   "settings": {
 		"appearanceTools": true,
