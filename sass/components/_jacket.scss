@@ -1,0 +1,29 @@
+/* Jacket
+--------------------------------------------- */
+
+#jacket {
+	position: relative;
+// 	top: -8.25rem;
+// 	height: 78vh;
+}
+
+.fixed {
+	position: fixed !important;
+	width: 100vw;
+	height: 90vh;
+	z-index: -1;
+}
+
+.fixed.blur {
+	--scr: calc(var(--scroll) * 1px);
+	--n: calc(.125%*var(--scroll));
+	--p: calc(115% - var(--n));
+	--b: calc(4px*var(--spct));
+// sass-lint:disable-all
+	filter: blur(var(--b)) opacity(var(--p));
+// sass-lint:enable-all
+}
+
+.fixed.zoom .wp-block-cover__image-background {
+	transform: scale(calc(1 + (var(--spct)/5)));
+}

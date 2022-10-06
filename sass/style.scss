@@ -1,0 +1,51 @@
+/*!
+Theme Name: woosta
+Theme URI: http://underscores.me/
+Author: John Pennypacker
+Author URI: https://pennypacker.net/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: 
+License URI: LICENSE
+Text Domain: woosta
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+
+woosta is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import 'woosta/fonts';
+@import 'woosta/variables';
+@import 'woosta/main';
+@import 'woosta/blocks-wp';
+@import 'woosta/login';
+
+@import 'generic/normalize';
+
+@import 'base/typography';
+@import 'base/elements';
+@import 'base/links';
+@import 'base/forms';
+
+@import 'layouts/layouts';
+
+@import 'components/comments';
+@import 'components/navigation';
+@import 'components/posts-pages';
+@import 'components/widgets';
+@import 'components/media';
+@import 'components/captions';
+@import 'components/galleries';
+@import 'components/jacket';
+
+@import 'plugins/jetpack';
+@import 'plugins/dps';
+
+@import 'utilities/accessibility';
+@import 'utilities/alignment';

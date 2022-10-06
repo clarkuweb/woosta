@@ -1,0 +1,98 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "patterns": [],
+	"styles": {
+		"spacing": {
+			"blockGap": "calc(var(--type__size) * 2)"
+		}
+	},
+  "settings": {
+		"appearanceTools": true,
+		"border": {
+			"radius": false
+		},
+		"color": {
+			"background": [],
+			"custom": false,
+			"customGradient": [],
+			"gradients": [],
+			"palette": [],
+			"defaultPalette": false
+		},
+		"layout": {
+			 "contentSize": "var(--width__column_full)",
+			 "wideSize": "80ch"
+		 },
+		"spacing": {
+			"margin": false,
+			"padding": false,
+			"units": [ "px", "rem", "vh", "vw", "%" ]
+		},
+		"typography": {
+			"customFontSize": true,
+			"lineHeight": false,
+			"dropCap": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"fontSizes": [
+				{
+					"name": "Normal",
+					"size": "var(--type__size)",
+					"slug": "normal"
+				},
+				{
+					"name": "Large",
+					"size": "calc(var(--type__size)*2)",
+					"slug": "large"
+				}
+			],
+			"fontFamilies": []
+		},
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": false
+        },
+				"typography": {
+					"customFontSize": false,
+					"fontSizes": []
+				},
+        "width": {
+        	"custom": false
+        }
+      },
+      "core/heading": {
+				"typography": {
+					"customFontSize": false,
+					"fontSizes": []
+				}
+      },
+      "core/pullquote": {
+        "border": {
+          "radius": false,
+          "color": false
+        },
+				"typography": {
+					"customFontSize": false,
+					"fontSizes": []
+				}
+      },
+      "core/quote": {
+				"typography": {
+					"customFontSize": false,
+					"fontSizes": []
+				}
+      },
+      "core/table": {
+				"typography": {
+					"customFontSize": false,
+					"fontSizes": []
+				}
+      }
+    }
+  }
+}

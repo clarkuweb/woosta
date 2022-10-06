@@ -1,0 +1,196 @@
+/* Links
+--------------------------------------------- */
+a {
+	color: rgba(var(--color__link),1);
+	transition: all .2s ease-in-out;
+	&:visited {
+		color: rgba(var(--color__visited),1);
+	}
+// 	&:hover {
+// 		/* this is fun because it only works on block level elements */
+// 		transform: translateX(-1px)translateY(-1px);
+// 	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--color__active);
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+	// changes background color
+	// interferes with header
+	&:not(.custom-logo-link):hover {
+// 		background-color: rgba(var(--color__link),1);
+// 		color: rgba(var(--color__base_900),1);
+
+// 		box-decoration-break: clone;
+// 		-webkit-box-decoration-break: clone;
+//  		box-shadow: 0 0 0 calc(var(--type__size) * .5) rgba(var(--color__link),1);
+	}
+}
+
+
+// article a {
+// 	position: relative;
+// 	content: '⭐️';
+// }
+// article a:before,
+// article a:after {
+// 	position: absolute;
+// 	z-index: -1;
+// 	content: '⭐️';
+// 	margin-left: -1.5rem;
+// 	margin-top: -.5rem;
+// }
+// article a:before {
+// 	top: calc(100% * var(--random));
+// 	left: calc(100% * var(--random));	
+// 	--rate: clamp(3, var(--random), 1);
+// 	animation: flicker calc(2s * var(--rate)) ease infinite, turnl calc(1s * clamp(2, var(--random), .75));
+// }
+// article a:after {
+// 	bottom: calc(100% * var(--random2));
+// 	right: calc(100% * var(--random2));	
+// 	animation: flicker calc(1.5s * clamp(3, var(--random2), .7)) ease infinite, turnr calc(1s * clamp(1.5, var(--random2), .75));
+// }
+// @keyframes flicker {
+//   0% {
+//     opacity: 1;
+//     scale: .5;
+//   }
+//   100% {
+//     opacity: 0;
+//     scale: 1;
+//     transform: rotateZ(30deg);
+//   }
+// }
+// @keyframes turnr {
+//   100% {
+//     transform: rotateZ(30deg);
+//   }
+// }
+// @keyframes turnl {
+//   100% {
+//     transform: rotateZ(-30deg);
+//   }
+// }
+
+
+// Wired-style underline/highlight
+// a {
+//   background-image: linear-gradient(transparent 50%, rgba(var(--color__brand),1) 50%);
+//   background-size: auto 195%;
+//   text-decoration: none !important;
+//   transition: all .1s ease-in-out;
+// 
+//   &:hover {
+//     background-position-y: 100%;
+//  		color: rgba(var(--color__base_900),1);
+//   }
+// }
+
+h1 a, 
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+h1 a:hover, 
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+// 	text-decoration: underline;
+}
+
+.site-header a,
+.site-header a:visited,
+.site-header a:hover,
+.site-header a:focus,
+.site-header a:active,
+.site-footer a,
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:focus,
+.site-footer a:active {
+// 	color: rgba(var(--color__brand_contrast),1);
+}
+
+.arrow {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		border-top: 2px solid rgba(var(--color__link),1);
+		height: 0;
+		width: 0;
+		position: absolute;
+		transition: all .15s ease-in;
+		top: .575rem;
+	}
+	&:after {
+		content: '';
+		display: block;
+		border: 2px solid rgba(var(--color__link),1);
+		border-width: 2px 2px 0 0;
+		transform: translateX(0) rotateZ(45deg);
+		transition: all .2s ease-in-out;
+		height: .5rem;
+		width: .5rem;
+		position: absolute;
+		top: .375rem;
+	}
+	&:hover {
+		&:before {
+			width: 1rem;
+		}
+		&:after {
+			transform: translateX(1rem) rotateZ(45deg);
+		}
+	}
+}
+
+.arrow-right {
+	@extend .arrow;
+	&:before {
+		right: -1rem;
+		left: calc(100% + 1rem);
+	}
+	&:after {
+		right: -1rem;
+	}
+}
+
+.arrow-left {
+	@extend .arrow;
+	&:before {
+		left: -1rem;
+	}
+	&:after {
+		border-width: 0 0 2px 2px;
+		left: -1rem;
+	}
+	&:hover {
+		&:before {
+			transform: translateX(-1rem);
+		}
+		&:after {
+			transform: translateX(-1rem) rotateZ(45deg);
+		}
+	}
+}
+
+.continue {
+//	@extend .arrow-right;
+}

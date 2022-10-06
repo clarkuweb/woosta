@@ -1,0 +1,60 @@
+:root {
+	--color__base_100: 26, 21, 17;
+	--color__base_200: 39, 34, 30;
+	--color__base_300: 56, 51, 47;
+	--color__base_400: 111, 106, 102;
+	--color__base_500: 152, 147, 143;
+	--color__base_600: 215, 210, 206;
+	--color__base_700: 226, 221, 217;
+	--color__base_800: 248, 243, 239;
+	--color__base_900: 255, 250, 246;
+
+	--color__brand: 204, 0, 0;
+	--color__brand_contrast: 255, 255, 255;
+	--color__accent: 57, 119, 212;
+	--color__accent_contrast: 255, 255, 255;
+	--color__highlight: 244, 215, 81;
+	--color__highlight_text: 0, 0, 0;
+	
+	--color__message: var(--color__base_500);
+	--color__succcess: 0, 163, 42;
+	--color__error: 214, 54, 56;
+	
+	--color__link: var(--color__brand);
+	--color__link_contrast: var(--color__brand_contrast);
+ 	--color__visited: 214,99,73;
+ 	--color__visited_contrast: var(--color__brand_contrast);
+	--color__hover: 255, 0, 0;
+	--color__hover_contrast: var(--color__brand_contrast);
+// 	--color__active: rgba(var(--color__base_100),1);
+	
+}
+
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--color__base_900: 26, 21, 17;
+// 		--color__base_800: 39, 34, 30;
+// 		--color__base_700: 56, 51, 47;
+// 		--color__base_600: 111, 106, 102;
+// 		--color__base_500: 152, 147, 143;
+// 		--color__base_400: 215, 210, 206;
+// 		--color__base_300: 226, 221, 217;
+// 		--color__base_200: 248, 243, 239;
+// 		--color__base_100: 255, 250, 246;
+// 
+// 		--color__link: 255, 64, 64;
+// 		--color__visited: 214,102,78;
+// 	}
+// }
+
+
+:root {
+	--type__size: 1.1rem;
+	--type__sans: 'Inter', sans-serif;
+	--type__serif: Georgia, serif;
+	--type__mono: Monaco, Courier, monospace;
+
+	--width__column_full: 80ch;
+	--width__column_half: calc(var(--width__column_full)*.5);
+	--width__column_third: calc(var(--width__column_full)*.33);
+}
