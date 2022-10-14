@@ -22,6 +22,7 @@
 			 "wideSize": "80ch"
 		 },
 		"spacing": {
+			"blockGap": null,
 			"margin": false,
 			"padding": false,
 			"units": [ "px", "rem", "vh", "vw", "%" ]

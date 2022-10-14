@@ -48,11 +48,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 :root {
-	--type__size: 1.1rem;
+	--type__size: 1.3rem;
 	--type__sans: 'Inter', sans-serif;
 	--type__serif: Georgia, serif;
 	--type__mono: Monaco, Courier, monospace;
-	--width__column_full: 80ch;
+	--width__column_full: 53rem;
 	--width__column_half: calc(var(--width__column_full)*.5);
 	--width__column_third: calc(var(--width__column_full)*.33);
 }
@@ -247,7 +247,8 @@ input[type="submit"] {
 	background-color: rgba(var(--color__brand), 1);
 	color: rgba(var(--color__brand_contrast), 1);
 	cursor: pointer;
-	font-size: var(--type__size);
+	font-size: calc(var(--type__size) * .9);
+	font-weight: 500;
 	line-height: 1;
 	padding: calc(var(--type__size) * .75) calc(var(--type__size) * 1.25);
 	transition: all .2s ease-in-out;
@@ -1145,8 +1146,12 @@ p {
 }
 
 li {
-	font-size: 1.2rem;
+	font-size: calc(var(--type__size) * .9);
 	margin-bottom: calc(var(--type__size) * .75);
+}
+
+.has-large-font-size {
+	font-size: calc(var(--type__size) * 1.5) !important;
 }
 
 dfn,

@@ -49,12 +49,12 @@
 
 
 :root {
-	--type__size: 1.1rem;
+	--type__size: 1.3rem;
 	--type__sans: 'Inter', sans-serif;
 	--type__serif: Georgia, serif;
 	--type__mono: Monaco, Courier, monospace;
 
-	--width__column_full: 80ch;
+	--width__column_full: 53rem;
 	--width__column_half: calc(var(--width__column_full)*.5);
 	--width__column_third: calc(var(--width__column_full)*.33);
 }

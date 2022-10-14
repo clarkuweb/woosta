@@ -29,7 +29,8 @@
 	background-color: rgba(var(--color__brand),1);
 	color: rgba(var(--color__brand_contrast),1);
 	cursor: pointer;
-	font-size: var(--type__size);
+	font-size: calc(var(--type__size) * .9);
+	font-weight: 500;
 	line-height: 1;
 	padding: calc(var(--type__size) * .75) calc(var(--type__size) * 1.25);
 	transition: all .2s ease-in-out;
