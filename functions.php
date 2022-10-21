@@ -223,6 +223,8 @@ function woosta_scripts() {
 // 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200..900&amp;display=swap" rel="stylesheet">
 	wp_enqueue_style( 'woosta-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@200..900&amp;display=swap', array(), NULL );
 
+	wp_enqueue_style( 'woosta-print', get_template_directory_uri() . '/style-print.css', array(), woosta_cache_buster(), 'print');
+
 	wp_enqueue_script( 'woosta-navigation', get_template_directory_uri() . '/js/navigation.js', array(), woosta_cache_buster(), TRUE );
 
 	wp_enqueue_script( 'woosta-jacket', get_template_directory_uri() . '/js/jacket.js', array(), woosta_cache_buster(), TRUE );

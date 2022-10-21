@@ -1,0 +1,146 @@
+/**
+ * Print Styles
+ */
+
+@import 'woosta/fonts';
+@import 'woosta/variables';
+
+
+@media print {
+
+	:root {
+		--type__size: 12pt;
+	}
+	.menu, 
+	#breadcrumbs,
+	.clark-header
+	{
+		display: none !important;
+	}
+ 
+	#page {
+		width: 100%; 
+		margin: 0; 
+	}
+		
+	@page {
+		margin: 1in;
+	}
+
+	body {
+		font-size: 10pt !important;
+		line-height: 1.3;
+		background: #fff !important;
+		color: #000;
+	}
+	
+	p, address, blockquote, table, th, td {
+		font-size: inherit !important;
+	}
+	th, td {
+		border: 1px solid #999;
+		border-collapse: collapse;
+	}
+	
+	li, cite {
+		font-size: 10pt !important;
+	}
+
+	h1 {
+		font-size: 24pt;
+	}
+	h2, h3, h4 {
+		font-size: 14pt;
+		margin-top: 25px;
+	}
+	h5, h6 {
+		font-size: 13pt;
+		margin-top: 25px;
+	}
+	.has-large-font-size {
+		font-size: 14pt !important;
+	}
+ 
+	a {
+		page-break-inside: avoid
+	}
+	blockquote {
+		page-break-inside: avoid;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid; 
+		page-break-inside: avoid;
+	}
+	img {
+		page-break-inside: avoid; 
+		page-break-after: avoid;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+	ul, ol, dl  {
+		page-break-before: avoid;
+	}
+
+		
+	a:link, a:visited, a {
+		background: transparent;
+		color: #cc0000;
+		text-decoration: underline;
+		text-align: left;
+	}
+
+	a[href^=http]:after {
+		content:" <" attr(href) "> ";
+	}
+
+	article a[href^="#"]:after {
+		 content: "";
+	}
+
+	a:not(:local-link):after {
+		 content:" <" attr(href) "> ";
+	}
+
+	html .site .alignleft {
+		margin-right: 12pt;
+		margin-left: 0;
+	}
+	html .site .alignright {
+		margin-right: 0pt;
+		margin-left: 12pt;
+	}
+	html .site .alignleft,
+	html .site .alignright {
+		max-width: 50%;
+		page-break-after: avoid;
+	}
+
+
+
+		
+	iframe {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		overflow: hidden !important;
+		line-height: 0pt !important;
+		white-space: nowrap;
+	}
+	.embed-youtube, .embed-responsive {
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+	}
+		
+	code, pre, kbd {
+		font-family: "Courier New", Courier, mono;
+		font-size: inherit;
+	}
+
+	ul, ol {
+		margin-left: 18pt;
+		margin-bottom: 20pt;    
+	}
+    
+}
