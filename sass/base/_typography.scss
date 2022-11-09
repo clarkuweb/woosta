@@ -80,6 +80,10 @@ li {
 	font-size: calc(var(--type__size) * 1.5) !important;
 }
 
+th, td {
+	font-size: calc(var(--type__size) * .9);
+}
+
 dfn,
 cite,
 em,

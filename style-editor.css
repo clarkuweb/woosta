@@ -1155,6 +1155,10 @@ li {
 	font-size: calc(var(--type__size) * 1.5) !important;
 }
 
+th, td {
+	font-size: calc(var(--type__size) * .9);
+}
+
 dfn,
 cite,
 em,
@@ -1286,8 +1290,7 @@ thead td {
 	border-bottom: 1px solid rgba(var(--color__base_100), 1);
 }
 
-th,
-td {
+th, td {
 	border: 0;
 	margin: 0;
 	padding: calc(var(--type__size) * .5);
