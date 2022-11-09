@@ -52,9 +52,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--type__sans: 'Inter', sans-serif;
 	--type__serif: Georgia, serif;
 	--type__mono: Monaco, Courier, monospace;
-	--width__column_full: 53rem;
-	--width__column_half: calc(var(--width__column_full)*.5);
-	--width__column_third: calc(var(--width__column_full)*.33);
+	--width__column: 53rem;
+	--width__wide: calc(var(--width__column)*1.5);
+	--width__column_half: calc(var(--width__column)*.5);
+	--width__column_third: calc(var(--width__column)*.33);
 }
 
 /*--------------------------------------------------------------
@@ -95,7 +96,7 @@ main,
 .breadcrumbs,
 .column-width,
 .widget-area {
-	max-width: var(--width__column_full);
+	max-width: var(--width__column);
 	margin: 0 auto;
 	padding: 0 var(--type__size);
 }
@@ -2287,7 +2288,7 @@ body {
 }
 
 h1.wp-block-post-title {
-	width: var(--width__column_full);
+	width: var(--width__column);
 }
 
 .site-title {

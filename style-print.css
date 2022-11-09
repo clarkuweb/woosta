@@ -33,9 +33,10 @@
 	--type__sans: 'Inter', sans-serif;
 	--type__serif: Georgia, serif;
 	--type__mono: Monaco, Courier, monospace;
-	--width__column_full: 53rem;
-	--width__column_half: calc(var(--width__column_full)*.5);
-	--width__column_third: calc(var(--width__column_full)*.33);
+	--width__column: 53rem;
+	--width__wide: calc(var(--width__column)*1.5);
+	--width__column_half: calc(var(--width__column)*.5);
+	--width__column_third: calc(var(--width__column)*.33);
 }
 
 @media print {
