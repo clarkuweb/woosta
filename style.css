@@ -1151,6 +1151,19 @@ li {
 	margin-bottom: calc(var(--type__size) * .75);
 }
 
+h1, h2, .dps .title, h3, h4, h5, h6, p, ol, ul, dl {
+	max-width: var(--width__column);
+}
+
+/* complicated way to defeat a silly specific WP style */
+html body .is-layout-constrained h1, html body .is-layout-constrained h2, html body .is-layout-constrained .dps .title, .dps html body .is-layout-constrained .title, html body .is-layout-constrained h3, html body .is-layout-constrained h4, html body .is-layout-constrained h5, html body .is-layout-constrained h6, html body .is-layout-constrained p, html body .is-layout-constrained ol, html body .is-layout-constrained ul, html body .is-layout-constrained dl {
+	margin-left: 0 !important;
+}
+
+.full-width {
+	max-width: 100%;
+}
+
 .has-large-font-size {
 	font-size: calc(var(--type__size) * 1.5) !important;
 }

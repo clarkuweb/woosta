@@ -76,6 +76,21 @@ li {
 	margin-bottom: calc(var(--type__size) * .75);
 }
 
+h1, h2, h3, h4, h5, h6, p, ol, ul, dl {
+	max-width: var(--width__column);
+}
+
+/* complicated way to defeat a silly specific WP style */
+html body .is-layout-constrained {
+	h1, h2, h3, h4, h5, h6, p, ol, ul, dl  {
+		margin-left: 0 !important;
+	}
+}
+
+.full-width {
+	max-width: 100%;
+}
+
 .has-large-font-size {
 	font-size: calc(var(--type__size) * 1.5) !important;
 }
