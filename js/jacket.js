@@ -2,9 +2,11 @@
 ( function() {
 
 	function createJacket() {
+		var skip = document.querySelector(".skip-link")
 		var j = document.createElement("DIV");
 		j.id = "jacket";
-		document.body.insertBefore(j, document.getElementById("page"));
+		
+		skip.parentNode.insertBefore(j, skip.nextSibling);
 	}
 	
 	window.addEventListener("DOMContentLoaded", function() {
