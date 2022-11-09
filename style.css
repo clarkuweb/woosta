@@ -1097,7 +1097,7 @@ textarea {
 	color: rgba(var(--color__base_200), 1);
 	font-family: var(--type__sans);
 	font-size: var(--type__size);
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 1.5;
 }
 
@@ -1139,7 +1139,7 @@ h6 {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 p {
