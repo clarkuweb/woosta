@@ -29,8 +29,10 @@
 	}
 	figcaption {
 		background-color: rgba(var(--color__base_800),1);
-		font-size: calc(var(--type__size) * .85);
+		font-size: calc(var(--type__size) * .7);
 		margin: 0;
-		padding: calc(var(--type__size) * .5) calc(var(--type__size) * .75) calc(var(--type__size) * .5);
+		max-width: 70ch;
+		padding: .5rem 0 0;
 	}
 }
+
