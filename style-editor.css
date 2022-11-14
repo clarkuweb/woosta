@@ -1324,6 +1324,17 @@ tfoot td {
 	background-color: rgba(var(--color__base_900), 1);
 }
 
+hr {
+	background-color: rgba(var(--color__base_400), 1);
+	border: none;
+	height: 4px;
+	margin: calc(var(--type__size) * 2) 0;
+}
+
+hr.wp-block-separator {
+	border: none;
+}
+
 /* Links
 --------------------------------------------- */
 a {
