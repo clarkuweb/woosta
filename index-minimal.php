@@ -10,7 +10,7 @@ get_template_part( 'template-parts/header', 'minimal' );
 dynamic_sidebar( 'precontent' );
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main" style="--thumbnail:url(<?php the_post_thumbnail_url() ?>)">
 
 		<?php
 		if ( have_posts() ) :
