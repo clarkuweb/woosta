@@ -29,10 +29,12 @@
 	}
 	figcaption {
 		background-color: rgba(var(--color__base_800),1);
+		background-color: transparent;
 		font-size: calc(var(--type__size) * .7);
 		margin: 0;
 		max-width: 70ch;
 		padding: .5rem 0 0;
 	}
+
 }
 

@@ -82,7 +82,12 @@
 	padding: 2rem 0;
 	text-align: left;
 }
-
+.wp-block-pullquote.big cite {
+	display: block;
+	max-width: 40%;
+	margin-left: 60%;
+	text-align: right;
+}
 
 .wp-block-query {
 	ul {

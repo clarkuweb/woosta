@@ -296,6 +296,13 @@ input:hover[type="submit"] {
 	text-align: left;
 }
 
+.wp-block-pullquote.big cite {
+	display: block;
+	max-width: 40%;
+	margin-left: 60%;
+	text-align: right;
+}
+
 .wp-block-query ul {
 	margin-left: 0;
 	padding-left: 0;
@@ -2074,6 +2081,7 @@ footer nav li:not(:last-of-type) {
 .wp-block-image figcaption,
 .wp-block-embed figcaption {
 	background-color: rgba(var(--color__base_800), 1);
+	background-color: transparent;
 	font-size: calc(var(--type__size) * .7);
 	margin: 0;
 	max-width: 70ch;
