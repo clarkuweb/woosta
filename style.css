@@ -2195,15 +2195,20 @@ footer nav li:not(:last-of-type) {
 }
 
 .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels {
-	transition: all .2s ease-in-out;
 	border: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	transition: all .2s ease-in-out;
 }
 
 .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels::after {
 	border-bottom: 2px solid RGB(223, 219, 215);
 	content: '';
 	display: block;
+	width: 120%;
 	margin: -1px -10% 0;
+	z-index: 1;
 }
 
 .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels .clarku__tab-label,
@@ -2212,7 +2217,9 @@ footer nav li:not(:last-of-type) {
 	border: 2px solid RGB(223, 219, 215);
 	border-width: 2px 2px 0;
 	color: RGB(102, 102, 102);
+	flex-grow: 1;
 	padding-top: 1.25rem;
+	z-index: 2;
 }
 
 .wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels .clarku__tab-label.active {

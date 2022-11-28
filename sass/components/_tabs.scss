@@ -1,33 +1,51 @@
 /* Tabs
 --------------------------------------------- */
 
+
 .wp-block-clarku-block-clarku-block-tabs {
 	margin-bottom: calc(var(--type__size) * 2);
+	
+	.clarku__tab-labels {
+		border: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		transition: all .2s ease-in-out;
+		&::after {
+			border-bottom: 2px solid RGB(223,219,215);
+			content:'';
+			display: block;
+			width: 120%;
+			margin: -1px -10% 0;	
+			z-index: 1;
+		}
+
+		.clarku__tab-label,
+		.clarku__tab-label.active {
+			background-color: RGB(223,219,215);
+			border: 2px solid RGB(223,219,215);
+			border-width: 2px 2px 0;
+			color: RGB(102,102,102);
+			flex-grow: 1;
+			padding-top: 1.25rem;
+			z-index: 2;
+		}
+		.clarku__tab-label.active {
+			background-color: RGBA(var(--color__base_800, '255,255,255'));
+			border-top-color: #cc0000;
+			color: #cc0000;
+		}
+
+
+	}
+
+	.clarku__tab-content {
+		border: 0;
+		padding: 1.5rem 0;
+	}
+
 }
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels {
-	transition: all .2s ease-in-out;
-	border: none;
-}
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels::after {
-	border-bottom: 2px solid RGB(223,219,215);
-	content:'';
-	display: block;
-	margin: -1px -10% 0;	
-}
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels .clarku__tab-label,
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels .clarku__tab-label.active {
-	background-color: RGB(223,219,215);
-	border: 2px solid RGB(223,219,215);
-	border-width: 2px 2px 0;
-	color: RGB(102,102,102);
-	padding-top: 1.25rem;
-}
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-labels .clarku__tab-label.active {
-	background-color: RGBA(var(--color__base_800, '255,255,255'));
-	border-top-color: #cc0000;
-	color: #cc0000;
-}
-.wp-block-clarku-block-clarku-block-tabs .clarku__tab-content {
-	border: 0;
-	padding: 1.5rem 0;
-}
+
+
+
+
