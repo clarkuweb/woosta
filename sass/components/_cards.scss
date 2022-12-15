@@ -1,0 +1,45 @@
+/* Cards
+--------------------------------------------- */
+
+.cards.columns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--type__size) * 1);
+	margin-bottom: calc(var(--type__size) * 2);
+}
+.cards.columns > .clarku-block-card {
+	background-color: rgba(var(--color__base_900),1);
+	color: #000;
+	width: calc(100%/3 - 1rem);
+}
+
+a.clarku-block-card  {
+	display: flex;
+	flex-direction: column;
+	
+	.clarku-block-card-content {
+		padding: calc(var(--type__size) * .75) !important;
+		flex-grow: 4;
+	}
+	h3 {
+		font-size: calc(var(--type__size) * 1.1);
+		margin-bottom: calc(var(--type__size) * .75) !important;
+	}
+	p {
+		font-size: calc(var(--type__size) * .85);
+		margin-bottom: calc(var(--type__size) * .75) !important;
+	}
+	
+}
+
+.clarku-block-card {
+	.clarku-block-card-img, img {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.clarku-block-card:hover {
+	.clarku-block-card-img, img {
+		transform: scale(1.02);
+	}
+} 

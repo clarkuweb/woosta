@@ -47,5 +47,12 @@
 }
 
 
-
-
+.clarku__tab-label[aria-selected=false] {
+	color: #000 !important;
+}
+.clarku__tab-label[aria-selected=false]:not(:first-of-type) {
+	border-left: 1px solid #aaa !important;
+}
+.clarku__tab-label.active + .clarku__tab-label[aria-selected=false] {
+	border-left-color: transparent !important;
+}
