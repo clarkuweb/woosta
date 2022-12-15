@@ -288,19 +288,30 @@ input:hover[type="submit"] {
 .wp-block-pullquote.big {
 	border: 4px solid #cc0000;
 	color: #999999;
-	font-size: 2.3rem;
-	font-weight: 350;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	padding: 2rem 0;
+	font-size: calc(var(--type__size) * 1.5);
+	margin-top: calc(var(--type__size) * 2);
+	margin-bottom: calc(var(--type__size) * 2);
+	padding: calc(var(--type__size) * 1) 0;
 	text-align: left;
 }
 
 .wp-block-pullquote.big cite {
 	display: block;
-	max-width: 40%;
-	margin-left: 60%;
+	max-width: 80%;
+	margin-left: 20%;
 	text-align: right;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-block-pullquote.big {
+		font-size: calc(var(--type__size) * 2.5);
+		margin-top: calc(var(--type__size) * 2.5);
+		margin-bottom: calc(var(--type__size) * 2.5);
+	}
+	.wp-block-pullquote.big cite {
+		margin-left: 60%;
+		max-width: 40%;
+	}
 }
 
 .wp-block-query ul {
