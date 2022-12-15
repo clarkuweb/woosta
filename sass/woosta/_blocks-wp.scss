@@ -1,3 +1,10 @@
+.wp-block-columns {
+	gap: calc(var(--type__size) * 1);
+}
+.wp-block-columns:not(:last-of-type) {
+	margin-bottom: calc(var(--type__size) * 1);
+}
+
 .wp-block-quote,
 .wp-block-buttons,
 .wp-block-cover,

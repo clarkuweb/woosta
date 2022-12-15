@@ -108,6 +108,20 @@ footer.site-footer {
 }
 
 
+.wp-block-image.wp-block-image-round img,
+.rounded img {
+	object-fit: cover;
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+
+.caps {
+	text-transform: uppercase;
+}
+
+
 .no-gap {
 	gap: 0 !important;
 }
@@ -135,6 +149,12 @@ footer.site-footer {
 	position: relative;
 	z-index: 9;
 }
+
+.roomy {
+	padding-top: calc(var(--type__size) * 4);
+	padding-bottom: calc(var(--type__size) * 4);
+}
+
 
 .wp-block-columns.equal-height > .wp-block-column {
 	display: flex;
