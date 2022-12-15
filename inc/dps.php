@@ -36,3 +36,26 @@ function woosta_dps_defaults( $out, $pairs, $atts ) {
 }
 add_filter( 'shortcode_atts_display-posts', 'woosta_dps_defaults', 10, 3 );
 
+
+/**
+ * Template Parts with Display Posts Shortcode
+ * @author Bill Erickson
+ * @see https://www.billerickson.net/template-parts-with-display-posts-shortcode
+ *
+ * @param string $output, current output of post
+ * @param array $original_atts, original attributes passed to shortcode
+ * @return string $output
+ */
+function woosta_dps_template_part( $output, $original_atts ) {
+
+	// Return early if our "layout" attribute is not specified
+	if( empty( $original_atts['layout'] ) )
+		return $output;
+	ob_start();
+	get_template_part( 'template-parts/dps', $original_atts['layout'] );
+	$new_output = ob_get_clean();
+	if( !empty( $new_output ) )
+		$output = $new_output;
+	return $output;
+}
+add_action( 'display_posts_shortcode_output', 'woosta_dps_template_part', 10, 2 );
