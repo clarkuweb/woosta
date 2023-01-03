@@ -41,7 +41,7 @@ add_action( 'after_setup_theme', 'woosta_custom_header_setup' );
 function woosta_add_custom_header_styles() {
 
 	if ( ! woosta_is_minimal() && has_header_image() ) {
-		$header_image = get_theme_mod( 'header_image_data' );
+		$header_image = (object)get_theme_mod( 'header_image_data' );
 		
 		$style_properties = array(
 			'background-image' => 'url(' . get_header_image() . ')',
