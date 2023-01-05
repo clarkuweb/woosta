@@ -126,6 +126,11 @@ footer.site-footer {
 	gap: 0 !important;
 }
 
+.big-gap {
+	gap: 2rem;
+	font-size: calc(var(--type__size) * .9);
+}
+
 .tight {
 	margin-left: calc(var(--type__size)*.125);
 	margin-right: calc(var(--type__size)*.125);
@@ -159,6 +164,13 @@ footer.site-footer {
 .wp-block-columns.equal-height > .wp-block-column {
 	display: flex;
 }
+.columns.equal-height {
+	align-items: stretch !important;
+}
+.columns.equal-height > a.clarku-block-card {
+	height: auto;
+}
+
 
 .no-bottom-margin {
 	margin-bottom: 0;

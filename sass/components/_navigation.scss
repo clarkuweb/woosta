@@ -3,13 +3,15 @@
 
 .breadcrumbs {
 	margin-bottom: calc(var(--type__size) * 1.5); 
+	position: relative;
+	z-index: 10;
 	ol {
 		margin-left: 0;
 		padding-left: 0;
 	}
 	li {
 		display: inline-block;
-		font-size: calc(var(--type__size) * .9);
+		font-size: calc(var(--type__size) * .8);
 		list-style: none;
 		max-width: 20ch;
 		white-space: nowrap;
@@ -26,19 +28,6 @@
 		}
 	}
 }
-
-.breadcrumbs {
-	position: relative;
-	z-index: 10;
-	li {
-		background-color: rgba(var(--color__base_900), .5);
-		border-radius: 2px;
-		font-weight: 300;
-		padding: .25rem .5rem;
-		margin-right: 0 !important;
-	}
-}
-
 
 
 .site-main .comment-navigation,
