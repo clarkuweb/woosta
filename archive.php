@@ -7,7 +7,14 @@
  * @package woosta
  */
 
-get_header();
+get_template_part( 'template-parts/header' );
+echo '<div class="widget-area" id="precontent">';
+dynamic_sidebar( 'precontent' );
+echo '</div>';
+
+
+get_template_part( 'template-parts/single', 'page', array('classes' => 'excerpt'));
+
 ?>
 
 	<main id="primary" class="site-main">
@@ -47,5 +54,7 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
-get_footer();
+echo '<div class="widget-area" id="prefooter">';
+dynamic_sidebar( 'prefooter' );
+echo '</div>';
+get_template_part( 'template-parts/footer' );
