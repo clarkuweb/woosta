@@ -8,10 +8,11 @@
 	ol {
 		margin-left: 0;
 		padding-left: 0;
+// 		padding-left: calc(var(--type__size) * 1); 
 	}
 	li {
 		display: inline-block;
-		font-size: calc(var(--type__size) * .8);
+		font-size: calc(var(--type__size) * .7;
 		list-style: none;
 		max-width: 20ch;
 		white-space: nowrap;
@@ -72,6 +73,10 @@ footer nav {
 	li:not(:last-of-type) {
 		margin-right: .5rem;
 	}
+}
+
+.main-navigation li {
+	font-size: calc( var(--type__size) * .8);
 }
 
 /** handle the submenu toggle indicators **/
@@ -271,6 +276,7 @@ footer nav {
 @media screen and (min-width: 37.5em) {
 
 	.main-navigation {
+		margin-bottom: calc( var(--type__size) * 2 );
 		width: 100%;
 		&::before {
 			content: none;
