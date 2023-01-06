@@ -73,7 +73,6 @@ header.site-header {
 	background-color: rgba(var(--color__base_900), 1);
 	color: rgba(var(--color__base_100), 1);
 	margin: 0 0 calc(var(--type__size) * 1);
-	padding: var(--type__size) var(--type__size) 0;
 }
 
 header.site-header.minimal {
@@ -109,6 +108,29 @@ main,
 	.site-header > nav {
 		margin: 0 auto;
 	}
+}
+
+.site-header .clark-bar {
+	background-color: #cc0000;
+	color: #fff;
+	height: 3rem;
+	left: 0;
+	margin: 0;
+	max-width: 100vw;
+}
+
+.site-header .clark-bar figure {
+	margin: 0;
+}
+
+.site-header .clark-bar img {
+	height: 2.875rem;
+}
+
+.site-header .site-branding {
+	left: 0;
+	margin: 0;
+	max-width: 100vw;
 }
 
 footer.site-footer {

@@ -27,6 +27,7 @@
 	<?php dynamic_sidebar( 'preheader' ); ?>
 		
 	<header id="masthead" class="site-header minimal">
+		<?php get_template_part( 'template-parts/header/clark-bar' ); ?>  
 		<div class="site-branding">		
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->

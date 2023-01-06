@@ -47,12 +47,9 @@ function woosta_add_custom_header_styles() {
 			'background-image' => 'url(' . get_header_image() . ')',
 			'background-position' => '50% 50%',
 			'background-size' => 'cover',
-			'display' => 'flex',
-			'flex-direction' => 'column',
-			'justify-content' => 'flex-end',
-			'min-height' => $header_image->height . 'px;',			
+			'height' => $header_image->height . 'px;',			
 		);
-		$css = '.site-header { ';
+		$css = '.site-branding { ';
 		foreach( $style_properties as $prop => $value ) {
 			$css .= $prop . ':' . $value . ';';
 		}
