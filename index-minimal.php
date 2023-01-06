@@ -6,8 +6,8 @@
  * 
  */
 
-get_template_part( 'template-parts/header', 'minimal' );
-dynamic_sidebar( 'precontent' );
+get_header( NULL, array('type' => 'minimal') );
+
 ?>
 
 	<main id="primary" class="site-main" style="--thumbnail:url(<?php the_post_thumbnail_url() ?>)">
@@ -62,5 +62,5 @@ dynamic_sidebar( 'precontent' );
 	</main><!-- #main -->
 
 <?php
-dynamic_sidebar( 'prefooter' );
-get_template_part( 'template-parts/footer', 'minimal' );
+
+get_footer( NULL, array('type' => 'minimal') );

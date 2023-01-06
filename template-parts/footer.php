@@ -9,6 +9,11 @@
  * @package woosta
  */
 
+
+echo '<div class="widget-area" id="prefooter">';
+dynamic_sidebar( 'prefooter' );
+echo '</div>';
+
 ?>
 
 	<footer id="colophon" class="site-footer">
