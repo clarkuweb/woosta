@@ -93,10 +93,9 @@ nav,
 		padding-left: var(--type__size);
 		width: 100%;
 		li {
-			display: block !important;
+			display: block;
 			font-size: calc( var(--type__size) * .8);
 			margin: 0;
-			width: 100%;
 			a {
 				background-color: #EFEAE4;
 				display: block;
@@ -124,6 +123,10 @@ nav,
 
 .wp-block-navigation ul {
 	padding-left: 0;
+	li {
+		display: block !important;
+		width: 100%;
+	}
 }
 .wp-block-navigation__responsive-container .wp-block-navigation-link a:link,
 nav ul li a:link,
@@ -403,16 +406,22 @@ nav.toggled {
 // }
 
 
-// footer nav {
-// 	ul {
-// 		margin-left: 0;
-// 		padding-left: 0;
-// 	}
-// 	li {
-// 		display: inline-block;
-// 		list-style: none;
-// 	}
-// 	li:not(:last-of-type) {
-// 		margin-right: .5rem;
-// 	}
-// }
+footer nav {
+	background-color: transparent;
+	ul {
+		display: block;
+		margin: 0 auto 2rem;
+		padding-left: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+			padding-right: .5rem;
+			a {
+				background-color: transparent !important;
+				border: none !important;
+				display: inline;
+				padding: 0 !important;
+			}
+		}
+	}
+}

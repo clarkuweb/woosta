@@ -1795,10 +1795,9 @@ nav ul,
 
 nav ul li,
 .wp-block-navigation ul li {
-	display: block !important;
+	display: block;
 	font-size: calc( var(--type__size) * .8);
 	margin: 0;
-	width: 100%;
 }
 
 nav ul li a,
@@ -1819,6 +1818,11 @@ nav ul li.current-menu-item a, nav ul li.current-page-ancestor a,
 
 .wp-block-navigation ul {
 	padding-left: 0;
+}
+
+.wp-block-navigation ul li {
+	display: block !important;
+	width: 100%;
 }
 
 .wp-block-navigation__responsive-container .wp-block-navigation-link a:link,
@@ -1969,6 +1973,29 @@ nav.toggled .menu-toggle:hover {
 		border-left: none;
 		margin-left: 0;
 	}
+}
+
+footer nav {
+	background-color: transparent;
+}
+
+footer nav ul {
+	display: block;
+	margin: 0 auto 2rem;
+	padding-left: 0;
+}
+
+footer nav ul li {
+	display: inline-block;
+	list-style: none;
+	padding-right: .5rem;
+}
+
+footer nav ul li a {
+	background-color: transparent !important;
+	border: none !important;
+	display: inline;
+	padding: 0 !important;
 }
 
 /* Posts and pages
