@@ -16,7 +16,8 @@ header.site-header {
 	margin: 0 0 calc(var(--type__size) * 1); 
 }
 header.site-header.minimal {
-	padding-bottom: calc(var(--type__size) * .25);
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 .site-title {

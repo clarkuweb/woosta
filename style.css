@@ -76,7 +76,8 @@ header.site-header {
 }
 
 header.site-header.minimal {
-	padding-bottom: calc(var(--type__size) * .25);
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 .site-title {
