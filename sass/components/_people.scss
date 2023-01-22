@@ -2,13 +2,67 @@
 --------------------------------------------- */
 
 .people-card {
+	background-color: rgba(var(--color__base_900),.5);
+	border-radius: 2px;
+	box-shadow: 0 1px 8px #eaeaea;
+	color: #000;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: calc(var(--type__size) * .9);
+	gap: calc(var(--type__size) * 1);
+	margin-bottom: calc(var(--type__size) * 2);
+	min-width: 5rem;
+	padding: 2rem;
+	width: calc(100%/3 - 1rem);
+	header, a, figure {
+		width: 100%;
+	}
+	figure {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul, li {
+		font-size: calc(var(--type__size) * .85);
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.p-name {
+		font-size: calc(var(--type__size) * 1.1);
+		font-weight: bold;
+	}
+}
+
+.cu_people .people-card {
+	width: calc(100%/3);
+}
+@media all and (min-width: 420px) {
+	.cu_people .people-card {
+		float: right;
+		margin-left: calc(var(--type__size) * 1.5);
+	}
+}
+
+
+.clarku-people {
 	display: flex;
 	flex-wrap: wrap;
 	gap: calc(var(--type__size) * 1);
-	margin-bottom: calc(var(--type__size) * 2);
+	.people-card {
+		margin-bottom: 0;
+	}
 }
-people-card {
-	background-color: rgba(var(--color__base_900),1);
-	color: #000;
+
+
+.halves .people-card {
+	width: calc(100%/2 - 1rem);
+}
+.thirds .people-card {
 	width: calc(100%/3 - 1rem);
+}
+.fourths {
+	gap: calc(var(--type__size) * .5);
+}
+.fourths .people-card {
+	width: calc(100%/4 - .5rem);
 }

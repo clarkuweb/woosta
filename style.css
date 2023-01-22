@@ -290,7 +290,7 @@ footer.site-footer {
 }
 
 .button, .wp-block-button a,
-.wp-block-button > div, input[type="button"],
+.wp-block-button > div, #login .button-primary, input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid rgba(var(--color__brand), 1);
@@ -306,7 +306,7 @@ input[type="submit"] {
 }
 
 .button:hover, .wp-block-button a:hover,
-.wp-block-button > div:hover, input:hover[type="button"],
+.wp-block-button > div:hover, #login .button-primary:hover, input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"] {
 	background-color: rgba(var(--color__hover), 1) !important;
@@ -462,7 +462,7 @@ input:hover[type="submit"] {
 }
 
 .login .button.wp-hide-pw, .login .wp-block-button a.wp-hide-pw, .wp-block-button .login a.wp-hide-pw,
-.login .wp-block-button > div.wp-hide-pw, .login input.wp-hide-pw[type="button"],
+.login .wp-block-button > div.wp-hide-pw, .login #login .wp-hide-pw.button-primary, #login .login .wp-hide-pw.button-primary, .login input.wp-hide-pw[type="button"],
 .login input.wp-hide-pw[type="reset"],
 .login input.wp-hide-pw[type="submit"] {
 	background: 0 0;
@@ -481,26 +481,26 @@ input:hover[type="submit"] {
 	top: 0;
 }
 
-.login .button.wp-hide-pw .dashicons, .login .wp-block-button a.wp-hide-pw .dashicons, .wp-block-button .login a.wp-hide-pw .dashicons, .login .wp-block-button > div.wp-hide-pw .dashicons, .login input.wp-hide-pw[type="button"] .dashicons, .login input.wp-hide-pw[type="reset"] .dashicons, .login input.wp-hide-pw[type="submit"] .dashicons {
+.login .button.wp-hide-pw .dashicons, .login .wp-block-button a.wp-hide-pw .dashicons, .wp-block-button .login a.wp-hide-pw .dashicons, .login .wp-block-button > div.wp-hide-pw .dashicons, .login #login .wp-hide-pw.button-primary .dashicons, #login .login .wp-hide-pw.button-primary .dashicons, .login input.wp-hide-pw[type="button"] .dashicons, .login input.wp-hide-pw[type="reset"] .dashicons, .login input.wp-hide-pw[type="submit"] .dashicons {
 	position: relative;
 	width: calc(var(--type__size) * 1.25);
 	height: calc(var(--type__size) * 1.25);
 	top: calc(var(--type__size) * .25);
 }
 
-.login .button.wp-hide-pw span:before, .login .wp-block-button a.wp-hide-pw span:before, .wp-block-button .login a.wp-hide-pw span:before, .login .wp-block-button > div.wp-hide-pw span:before, .login input.wp-hide-pw[type="button"] span:before, .login input.wp-hide-pw[type="reset"] span:before, .login input.wp-hide-pw[type="submit"] span:before {
+.login .button.wp-hide-pw span:before, .login .wp-block-button a.wp-hide-pw span:before, .wp-block-button .login a.wp-hide-pw span:before, .login .wp-block-button > div.wp-hide-pw span:before, .login #login .wp-hide-pw.button-primary span:before, #login .login .wp-hide-pw.button-primary span:before, .login input.wp-hide-pw[type="button"] span:before, .login input.wp-hide-pw[type="reset"] span:before, .login input.wp-hide-pw[type="submit"] span:before {
 	color: rgba(var(--color__base_400), 1);
 }
 
 .login .button.wp-hide-pw:hover, .login .wp-block-button a.wp-hide-pw:hover, .wp-block-button .login a.wp-hide-pw:hover,
-.login .wp-block-button > div.wp-hide-pw:hover, .login input.wp-hide-pw:hover[type="button"],
+.login .wp-block-button > div.wp-hide-pw:hover, .login #login .wp-hide-pw.button-primary:hover, #login .login .wp-hide-pw.button-primary:hover, .login input.wp-hide-pw:hover[type="button"],
 .login input.wp-hide-pw:hover[type="reset"],
 .login input.wp-hide-pw:hover[type="submit"] {
 	background: 0 0;
 }
 
 .login .button.wp-hide-pw:focus, .login .wp-block-button a.wp-hide-pw:focus, .wp-block-button .login a.wp-hide-pw:focus,
-.login .wp-block-button > div.wp-hide-pw:focus, .login input.wp-hide-pw:focus[type="button"],
+.login .wp-block-button > div.wp-hide-pw:focus, .login #login .wp-hide-pw.button-primary:focus, #login .login .wp-hide-pw.button-primary:focus, .login input.wp-hide-pw:focus[type="button"],
 .login input.wp-hide-pw:focus[type="reset"],
 .login input.wp-hide-pw:focus[type="submit"] {
 	background: 0 0;
@@ -510,7 +510,7 @@ input:hover[type="submit"] {
 }
 
 .login .button.wp-hide-pw:active, .login .wp-block-button a.wp-hide-pw:active, .wp-block-button .login a.wp-hide-pw:active,
-.login .wp-block-button > div.wp-hide-pw:active, .login input.wp-hide-pw:active[type="button"],
+.login .wp-block-button > div.wp-hide-pw:active, .login #login .wp-hide-pw.button-primary:active, #login .login .wp-hide-pw.button-primary:active, .login input.wp-hide-pw:active[type="button"],
 .login input.wp-hide-pw:active[type="reset"],
 .login input.wp-hide-pw:active[type="submit"] {
 	background: 0 0;
@@ -554,7 +554,7 @@ input:hover[type="submit"] {
 }
 
 .login .reset-pass-submit .button, .login .reset-pass-submit .wp-block-button a, .wp-block-button .login .reset-pass-submit a,
-.login .reset-pass-submit .wp-block-button > div, .login .reset-pass-submit input[type="button"],
+.login .reset-pass-submit .wp-block-button > div, .login .reset-pass-submit #login .button-primary, #login .login .reset-pass-submit .button-primary, .login .reset-pass-submit input[type="button"],
 .login .reset-pass-submit input[type="reset"],
 .login .reset-pass-submit input[type="submit"] {
 	display: inline-block;
@@ -826,6 +826,11 @@ input::-ms-reveal {
 		display: block;
 		margin: 5px auto 0;
 	}
+}
+
+/** pasword protected styles **/
+#password-protected-logo {
+	display: none;
 }
 
 /* Normalize
@@ -2327,16 +2332,76 @@ a.clarku-block-card p {
 /* People
 --------------------------------------------- */
 .people-card {
+	background-color: rgba(var(--color__base_900), 0.5);
+	border-radius: 2px;
+	box-shadow: 0 1px 8px #eaeaea;
+	color: #000;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: calc(var(--type__size) * .9);
+	gap: calc(var(--type__size) * 1);
+	margin-bottom: calc(var(--type__size) * 2);
+	min-width: 5rem;
+	padding: 2rem;
+	width: calc(100%/3 - 1rem);
+}
+
+.people-card header, .people-card a, .people-card figure {
+	width: 100%;
+}
+
+.people-card figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.people-card ul, .people-card li {
+	font-size: calc(var(--type__size) * .85);
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.people-card .p-name {
+	font-size: calc(var(--type__size) * 1.1);
+	font-weight: bold;
+}
+
+.cu_people .people-card {
+	width: calc(100%/3);
+}
+
+@media all and (min-width: 420px) {
+	.cu_people .people-card {
+		float: right;
+		margin-left: calc(var(--type__size) * 1.5);
+	}
+}
+
+.clarku-people {
 	display: flex;
 	flex-wrap: wrap;
 	gap: calc(var(--type__size) * 1);
-	margin-bottom: calc(var(--type__size) * 2);
 }
 
-people-card {
-	background-color: rgba(var(--color__base_900), 1);
-	color: #000;
+.clarku-people .people-card {
+	margin-bottom: 0;
+}
+
+.halves .people-card {
+	width: calc(100%/2 - 1rem);
+}
+
+.thirds .people-card {
 	width: calc(100%/3 - 1rem);
+}
+
+.fourths {
+	gap: calc(var(--type__size) * .5);
+}
+
+.fourths .people-card {
+	width: calc(100%/4 - .5rem);
 }
 
 /* Jetpack infinite scroll

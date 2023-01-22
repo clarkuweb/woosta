@@ -11,11 +11,12 @@
  */
 add_filter( 'admin_email_check_interval', '__return_false' );
 
+
 /**
  * Include css and js
  */
 function woosta_login_enqueues() {
-	wp_register_style( 'woosta-login', get_stylesheet_uri() );
+	wp_register_style( 'woosta-login', get_stylesheet_uri(), array(), woosta_cache_buster() );
 	wp_enqueue_style( 'woosta-login' );
 
 	$logo = esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) );

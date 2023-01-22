@@ -406,3 +406,14 @@ input::-ms-reveal {
 	}
 }
 
+
+/** pasword protected styles **/
+#password-protected-logo {
+	display: none;
+}
+#login {
+	.button-primary {
+		@extend .button;
+
+	}
+}
