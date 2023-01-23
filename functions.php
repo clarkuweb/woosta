@@ -26,6 +26,28 @@ function woosta_cache_buster() {
 }
 
 /**
+ * Determines whether or not we're in the production environment
+ * @see woosta_gtm() in inc/head-functions.php
+ *
+ * @return bool
+ */
+function is_prod() {
+	if( defined( 'DOMAIN_CURRENT_SITE' ) && 'www.clarku.edu' === 'DOMAIN_CURRENT_SITE' ) { // this gets set in wp-config, so it ought to be the quickest test
+		return TRUE;
+	}
+	$domain_segments = explode( ".", $_SERVER['SERVER_NAME'] );
+	if( 
+		in_array('dev', $domain_segments ) || 
+		in_array('testing', $domain_segments ) || 
+		in_array('training', $domain_segments ) || 
+		'local' === end( $domain_segments ) ) {
+			return FALSE;
+	}
+	return TRUE;
+}
+
+
+/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which
