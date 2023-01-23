@@ -78,7 +78,7 @@ add_action( 'customize_register', 'woosta_breadcrumbs_customizer' );
  */
 function woosta_get_current_path( $strip = true ) {
 
-	if ( ! isset( $_SERVER['HTTP_REFERER'] ) || strpos( $_SERVER['HTTP_REFERER'], 'wp-admin/customize.php' ) === false ) {
+	if ( ! isset( $_SERVER['HTTP_REFERER'] ) || FALSE === strpos( $_SERVER['HTTP_REFERER'], 'wp-admin/customize.php' ) ) {
 		$current_path = trim( $_SERVER['REQUEST_URI'] );
 	} else {
 		// when the Customizer is being used, we need to use the referrer
@@ -154,7 +154,7 @@ function woosta_breadcrumbs() {
 	$path_segments = explode( '/', $url );
 	
 	$path = '';
-
+	
 	foreach ( $path_segments as $p ) {
 		if ( empty( $p ) ) {
 			continue;
@@ -166,6 +166,7 @@ function woosta_breadcrumbs() {
 			$crumbs[] = $link;
 		}
 	}
+	
 	return woosta_format_breadcrumbs( $crumbs );
 }
 
@@ -184,7 +185,7 @@ function woosta_breadcrumbs_get_link( $path ) {
 
 	$p = '';
 	$post_id = url_to_postid( get_site_url() . $path );
-	
+
 	if ( 0 !== $post_id ) { // it's a post or a page.
 		// $p = get_page_by_path( $path );
 		$p = get_post( $post_id );
@@ -202,8 +203,10 @@ function woosta_breadcrumbs_get_link( $path ) {
 	// is it a custom post type?
 	// check this first so that it takes precedent over category
 	$post_type_object = get_post_type_object( get_post_type() );
-	if ( is_object( $post_type_object ) && is_array( $post_type_object->rewrite ) ) {
-		$slug = $post_type_object->rewrite['slug'];
+	if ( is_object( $post_type_object ) ) {
+		if( is_array( $post_type_object->rewrite ) ) {
+			$slug = $post_type_object->rewrite['slug'];
+		}
 	}
 
 	if ( isset( $slug ) ) {
@@ -211,8 +214,18 @@ function woosta_breadcrumbs_get_link( $path ) {
 			'name' => ucfirst( $slug ),
 			'href' => get_site_url() . $path,
 		);
+
 		return $output;
 	}
+
+	if( is_page() ) { // with people page roots, this gets around weirdness
+		$output = array(
+			'name' => get_the_title(),
+			'href' => get_site_url() . $path,
+		);
+		return $output;
+	}
+	
 
 	// is it a category?
 	// @todo Catch custom post type categories too.
@@ -225,6 +238,9 @@ function woosta_breadcrumbs_get_link( $path ) {
 		);
 		return $output;
 	}
+
+	
+	
 
 }
 
