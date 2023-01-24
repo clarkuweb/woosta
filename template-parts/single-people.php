@@ -14,14 +14,14 @@ echo '</div>';
 
 ?>
 <main>
-	<article class="h-card clarku-people">
+	<article class="clarku-people">
 
 			<?php the_title('<div class="title p-name"><h1>', '</h1></div>'); ?>
 		
 
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry">
-					<div class="people-card">
+					<div class="people-card h-card">
 						<?php if ( $has_thumbnail ) : ?>
 						<figure class="person-photo">
 							<?php if ( $args['link'] === TRUE ): ?>

@@ -53,6 +53,11 @@
 	}
 }
 
+.type-cu_people {
+	.people-card {
+		min-width: 16rem;
+	}
+}
 
 .halves .people-card {
 	width: calc(100%/2 - 1rem);
