@@ -4,7 +4,7 @@
 	$email = get_post_meta( $id, '_cu_people_email', TRUE );
 	$phone = get_post_meta( $id, '_cu_people_phone', TRUE );
 	$title = get_post_meta( $id, '_cu_people_title', TRUE );
- 	$has_thumbnail = ( $args['thumbnail'] !== FALSE && has_post_thumbnail() ) ? TRUE : FALSE;
+ 	$has_thumbnail = ( has_post_thumbnail() ) ? TRUE : FALSE;
 
 
 get_template_part( 'template-parts/header' );
@@ -24,11 +24,7 @@ echo '</div>';
 					<div class="people-card h-card">
 						<?php if ( $has_thumbnail ) : ?>
 						<figure class="person-photo">
-							<?php if ( $args['link'] === TRUE ): ?>
-								<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( $args['thumbnail'], array( 'class' => 'u-photo ' . $args['thumbnail'] )); ?></a>
-							<?php else: ?>
-								<?php the_post_thumbnail( $args['thumbnail'], array( 'class' => 'u-photo ' . $args['thumbnail'] )); ?>
-							<?php endif; ?>
+							<?php the_post_thumbnail( 'medium', array( 'class' => 'u-photo medium' )); ?>
 						</figure>
 						<?php else: ?>
 							<figure class="initials">
@@ -40,7 +36,6 @@ echo '</div>';
 								?>
 							</figure>
 						<?php endif; ?>
-
 					
 						<ul class="person-details">
 							<li class="p-name"><?php the_title(); ?></li>
