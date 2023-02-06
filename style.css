@@ -2,8 +2,8 @@
 /*!
 Theme Name: woosta
 Theme URI: http://underscores.me/
-Author: John Pennypacker
-Author URI: https://pennypacker.net/
+Author: Clark University
+Author URI: https://www.clarku.edu/
 Description: Description
 Version: 1.0.0
 Tested up to: 5.4
@@ -2329,6 +2329,19 @@ a.clarku-block-card p {
 	transform: scale(1.04) !important;
 }
 
+/* Containers
+--------------------------------------------- */
+body .wp-block-create-block-clarku-block-container {
+	padding: 2rem 0;
+}
+
+body .wp-block-create-block-clarku-block-container .clarku-block-container-innerblocks-wide {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--width__wide);
+	width: auto;
+}
+
 /* People
 --------------------------------------------- */
 .people-card {
@@ -2365,7 +2378,7 @@ a.clarku-block-card p {
 }
 
 .people-card .p-name {
-	font-size: calc(var(--type__size) * 1.1);
+	font-size: calc(var(--type__size) * 1);
 	font-weight: bold;
 }
 
@@ -2383,11 +2396,6 @@ a.clarku-block-card p {
 .clarku-people {
 	display: flex;
 	flex-wrap: wrap;
-	gap: calc(var(--type__size) * 1);
-}
-
-.clarku-people .people-card {
-	margin-bottom: 0;
 }
 
 .type-cu_people .people-card {
@@ -2395,23 +2403,38 @@ a.clarku-block-card p {
 }
 
 .clarku-people .people-card {
-	width: calc(100%/2 - 1rem);
+	margin: 0 1rem 1rem;
+	width: calc(100% - 2rem);
 }
 
-.halves .people-card {
-	width: calc(100%/2 - 1rem);
+@media all and (min-width: 500px) {
+	.clarku-people {
+		gap: calc(var(--type__size) * 1);
+	}
+	.clarku-people .people-card {
+		margin: 0;
+	}
+	.clarku-people .people-card,
+	.thirds .people-card,
+	.fourths .people-card {
+		width: calc(100%/2 - 1rem);
+	}
 }
 
-.thirds .people-card {
-	width: calc(100%/3 - 1rem);
+@media all and (min-width: 700px) {
+	.thirds .people-card,
+	.fourths .people-card {
+		width: calc(100%/3 - 1rem);
+	}
 }
 
-.fourths {
-	gap: calc(var(--type__size) * .5);
-}
-
-.fourths .people-card {
-	width: calc(100%/4 - .5rem);
+@media all and (min-width: 900px) {
+	.fourths {
+		gap: calc(var(--type__size) * .5);
+	}
+	.fourths .people-card {
+		width: calc(100%/4 - .5rem);
+	}
 }
 
 /* Jetpack infinite scroll
@@ -2569,7 +2592,7 @@ html .site .alignright {
 	position: relative;
 	margin-left: calc(25% - 25vw);
 	margin-right: calc(25% - 25vw);
-	max-width: 100vw;
+	max-width: var(--width__wide);
 	width: auto;
 }
 
@@ -2579,6 +2602,13 @@ html .site .alignright {
 	margin-left: auto !important;
 	margin-right: auto !important;
 	width: inherit;
+}
+
+.alignfull .alignwide {
+	max-width: var(--width__wide);
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

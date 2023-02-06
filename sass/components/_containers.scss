@@ -1,0 +1,18 @@
+/* Containers
+--------------------------------------------- */
+
+body .wp-block-create-block-clarku-block-container {
+	padding: 2rem 0;
+	// margin-bottom: 2rem;
+	.clarku-block-container-innerblocks-wide {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: var(--width__wide);
+		width: auto;
+	}
+}
+
+
+//	--width__column: 53rem;
+// 	--width__wide: calc(var(--width__column)*1.5);
+
