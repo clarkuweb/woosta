@@ -16,24 +16,30 @@ echo '</div>';
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<nav>
-			<?php 
-			wp_nav_menu(
-				array(
-					'theme_location' => 'navigation-menu',
-					'menu_id' => 'footer-navigation',
-					'depth' => 1,
-				)
-			);
-			?>
-		</nav>
-		<div class="site-info">
-			<?php
-				printf( esc_html__( '© Copyright %d %s', 'woosta' ), '2022', get_bloginfo( 'name' ) );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+
+		<div class="xalignwide">
+		
+			<div class="buttons">
+				<a class="button" href="https://www.clarku.edu/undergraduate-admissions/apply/">Apply</a>
+				<a class="button" href="https://www.clarku.edu/undergraduate-admissions/campus-visits/">Visit</a>
+				<a class="button" href="https://www.clarku.edu/contactus/">Connect</a>
+				<a class="button" href="https://alumni.clarku.edu/clarku">Give</a>
+			</div>
+
+			<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://www.testing.clarku.edu/student-success/wp-content/uploads/sites/303/2022/12/clark-logo-tagline-w.png" alt="Clark University: Challenge convention. Change our world." class="wp-image-329" width="192" height="232" srcset="http://success.local/wp-content/uploads/2022/12/clark-logo-tagline-w.png 768w, http://success.local/wp-content/uploads/2022/12/clark-logo-tagline-w-248x300.png 248w" sizes="(max-width: 192px) 100vw, 192px"></figure>
+
+		
+		</div>
+
+		<div class="subfooter">
+			<p class="alignwide policies"><a href="https://www.clarku.edu/who-we-are/fast-facts/public-information/">Public Information</a> | <a href="https://www.clarku.edu/policies/?wdt_search=privacy">Privacy Policy</a> | <a href="https://www.clarku.edu/website-accessibility-statement/">Accessibility</a> | <a href="http://clarku.edu/nondiscrimination-policy">Nondiscrimination Policy</a></p>
+			<p class="alignwide copyright">© Clark University</p>
+		</div>
+
+</footer>
+
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

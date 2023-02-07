@@ -174,10 +174,79 @@ main,
 }
 
 footer.site-footer {
-	background-color: rgba(var(--color__base_900), 1);
-	color: rgba(var(--color__base_100), 1);
+	background-color: rgba(var(--color__base_300), 1);
+	color: rgba(var(--color__base_900), 1);
 	margin: 0;
+	padding: calc(var(--type__size) * 2) 0 0;
+}
+
+footer.site-footer a:link, footer.site-footer a:visited, footer.site-footer a:hover {
+	color: #fff;
+}
+
+footer.site-footer .buttons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: calc(var(--type__size) * 2);
+}
+
+footer.site-footer .button, footer.site-footer .wp-block-button a, .wp-block-button footer.site-footer a,
+footer.site-footer .wp-block-button > div, footer.site-footer #login .button-primary, #login footer.site-footer .button-primary, footer.site-footer input[type="button"],
+footer.site-footer input[type="reset"],
+footer.site-footer input[type="submit"] {
+	background-color: rgba(var(--color__base_100), 0);
+	border: 2px solid rgba(var(--color__base_900), 1);
+	flex-grow: 1;
+	text-align: center;
+	text-decoration: none;
+	width: calc(100%/2 - 1rem);
+}
+
+footer.site-footer .button:hover, footer.site-footer .wp-block-button a:hover, .wp-block-button footer.site-footer a:hover,
+footer.site-footer .wp-block-button > div:hover, footer.site-footer #login .button-primary:hover, #login footer.site-footer .button-primary:hover, footer.site-footer input:hover[type="button"],
+footer.site-footer input:hover[type="reset"],
+footer.site-footer input:hover[type="submit"] {
+	background-color: rgba(var(--color__base_100), 1) !important;
+}
+
+footer.site-footer .subfooter {
+	background-color: rgba(var(--color__base_200), 1);
+	color: rgba(var(--color__base_900), 1);
+	margin: 0;
+	max-width: 100vw;
 	padding: var(--type__size);
+	width: 100%;
+}
+
+footer.site-footer .subfooter p {
+	font-size: calc(var(--type__size) * .8);
+	text-align: center;
+}
+
+footer.site-footer .alignwide {
+	max-width: var(--width__wide);
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+@media all and (min-width: 500px) {
+	footer.site-footer .buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: no-wrap;
+		gap: 1rem;
+		margin-bottom: calc(var(--type__size) * 2);
+		width: auto;
+	}
+	footer.site-footer .buttons .button, footer.site-footer .buttons .wp-block-button a, .wp-block-button footer.site-footer .buttons a,
+	footer.site-footer .buttons .wp-block-button > div, footer.site-footer .buttons #login .button-primary, #login footer.site-footer .buttons .button-primary, footer.site-footer .buttons input[type="button"],
+	footer.site-footer .buttons input[type="reset"],
+	footer.site-footer .buttons input[type="submit"] {
+		width: calc(100%/4 - 1rem);
+	}
 }
 
 .wp-block-image.wp-block-image-round img,
