@@ -56,7 +56,4 @@ echo '</div>';
 </main>
 
 <?php
-echo '<div class="widget-area" id="prefooter">';
-dynamic_sidebar( 'prefooter' );
-echo '</div>';
 get_template_part( 'template-parts/footer' );

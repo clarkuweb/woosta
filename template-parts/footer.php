@@ -27,7 +27,7 @@ echo '</div>';
 				<a class="button" href="https://alumni.clarku.edu/clarku">Give</a>
 			</div>
 
-			<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://www.testing.clarku.edu/student-success/wp-content/uploads/sites/303/2022/12/clark-logo-tagline-w.png" alt="Clark University: Challenge convention. Change our world." class="wp-image-329" width="192" height="232" srcset="http://success.local/wp-content/uploads/2022/12/clark-logo-tagline-w.png 768w, http://success.local/wp-content/uploads/2022/12/clark-logo-tagline-w-248x300.png 248w" sizes="(max-width: 192px) 100vw, 192px"></figure>
+			<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/media/clark-logo-tagline-w.png" alt="Clark University: Challenge convention. Change our world." width="192" height="232"></figure>
 
 		
 		</div>
