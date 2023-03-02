@@ -210,6 +210,7 @@ footer.site-footer {
 		flex-direction: row;
 		flex-wrap: nowrap;
 		gap: calc(var(--type__size) * 1);
+		justify-content: center;
 		& > div {
 			margin-bottom: 0;
 			width: calc(100%/3 - calc(var(--type__size) * 1));

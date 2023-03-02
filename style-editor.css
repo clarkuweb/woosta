@@ -284,6 +284,7 @@ footer.site-footer .copyright p {
 		flex-direction: row;
 		flex-wrap: nowrap;
 		gap: calc(var(--type__size) * 1);
+		justify-content: center;
 	}
 	footer.site-footer .links > div {
 		margin-bottom: 0;

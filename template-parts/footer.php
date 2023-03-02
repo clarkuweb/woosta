@@ -39,12 +39,12 @@ echo '</div>';
 				<ul class="engage">
 					<li><a href="https://www.clarku.edu/contactus/">Contact Us</a></li>
 					<li><a href="https://www.clarku.edu/offices/human-resources/job-opportunities/">Employment</a></li>
-					<li><a href="https://www.clarku.edu/who-we-are/fast-facts/public-information/">Public Information</a></li>
+					<li><a href="https://www.clarku.edu/events/">Events</a></li>
 				</ul>
 			</div>
 			<div>
 				<ul class="website">
-					<li><a href="#">doot</a></li>
+					<li><a href="https://www.clarku.edu/who-we-are/fast-facts/public-information/">Public Information</a></li>
 					<li><a href="https://www.clarku.edu/website-accessibility-statement/">Website Accessibility</a></li>
 					<li><a href="https://www.clarku.edu/policies/?wdt_search=privacy">Privacy Policy</a></li>
 				</ul>
