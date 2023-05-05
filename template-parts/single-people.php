@@ -1,9 +1,9 @@
 <?php
 	
 	$id = get_the_ID();
-	$email = get_post_meta( $id, '_cu_people_email', TRUE );
-	$phone = get_post_meta( $id, '_cu_people_phone', TRUE );
-	$title = get_post_meta( $id, '_cu_people_title', TRUE );
+	$email = get_post_meta( $id, 'cu_people_email', TRUE );
+	$phone = get_post_meta( $id, 'cu_people_phone', TRUE );
+	$title = get_post_meta( $id, 'cu_people_title', TRUE );
  	$has_thumbnail = ( has_post_thumbnail() ) ? TRUE : FALSE;
 
 
